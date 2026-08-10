@@ -1,5 +1,6 @@
 {
   "path_vector": "04/04/00/00",
   "status": "synchronized",
-  "repository": "cornbread78/alpha-root-kernel"
+  "repository": "cornbread78/alpha-root-kernel",
+  "sync_target": "main"
 }
