@@ -1,0 +1,9 @@
+{
+    "kernel_id": "ALPHA_ROOT_KERNEL_04040000",
+    "block_height": 0,
+    "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "merkle_root": "57d36d8682bf5625922c604f0e9a4ad8077ed81ff8198ad85095f84534e11818",
+    "tx_count": 2,
+    "status": "GENESIS_VAULT_LOCKED",
+    "vault_hash": "bdf3f2d372af4aecb10880e85eeabef0207626221fca4e731edc5bee38c807d9"
+}

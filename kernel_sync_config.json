@@ -1,0 +1,7 @@
+{
+    "vault": "default",
+    "path": "04/04/00/00",
+    "consensus_period": true,
+    "verify_blocks": true,
+    "xor_mask_active": true
+}

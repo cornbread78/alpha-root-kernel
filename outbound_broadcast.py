@@ -1,0 +1,32 @@
+import socket
+import sys
+
+HOST = "127.0.0.1"
+PORT = 8350
+PATH_ID = "04/04/00/00"
+
+def transmit_kernel():
+    try:
+        with open("kernel_tx.dat", "rb") as f:
+            tx_bytes = f.read()
+    except FileNotFoundError:
+        print("[!] Error: kernel_tx.dat not found in workspace.")
+        sys.exit(1)
+
+    print(f"[*] Payload loaded: {len(tx_bytes)} bytes")
+    print(f"[*] Connecting to local interface {HOST}:{PORT}...")
+
+    client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    try:
+        client.connect((HOST, PORT))
+        client.sendall(tx_bytes)
+        response = client.recv(4096)
+        print("[+] Transmission Successful!")
+        print("[*] Node Response:", response.decode("utf-8", errors="ignore").strip())
+    except Exception as e:
+        print(f"[!] Transmission error: {e}")
+    finally:
+        client.close()
+
+if __name__ == "__main__":
+    transmit_kernel()

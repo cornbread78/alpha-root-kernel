@@ -1,0 +1,313 @@
+
+
+
+
+
+2026-08-01T09:53:26Z Bitcoin Core version v31.0.0 (release build)
+2026-08-01T09:53:26Z Log output may contain privacy-sensitive information. Be cautious when sharing logs.
+2026-08-01T09:53:26Z Using the 'arm_shani(1way;2way)' SHA256 implementation
+2026-08-01T09:53:26Z Default data directory /data/data/com.termux/files/home/.bitcoin
+2026-08-01T09:53:26Z Using data directory /data/data/com.termux/files/home/04/04/00/00
+2026-08-01T09:53:26Z Config file: /data/data/com.termux/files/home/04/04/00/00/bitcoin.conf
+2026-08-01T09:53:26Z Config file arg: daemon="1"
+2026-08-01T09:53:26Z Config file arg: daemon="1"
+2026-08-01T09:53:26Z Config file arg: rpcallowip="127.0.0.1"
+2026-08-01T09:53:26Z Config file arg: rpcpassword=****
+2026-08-01T09:53:26Z Config file arg: rpcpassword=****
+2026-08-01T09:53:26Z Config file arg: rpcuser=****
+2026-08-01T09:53:26Z Config file arg: rpcuser=****
+2026-08-01T09:53:26Z Config file arg: server="1"
+2026-08-01T09:53:26Z Config file arg: server="1"
+2026-08-01T09:53:26Z Command-line arg: daemon=""
+2026-08-01T09:53:26Z Command-line arg: datadir="/data/data/com.termux/files/home/04/04/00/00"
+2026-08-01T09:53:26Z Using at most 125 automatic connections (32768 file descriptors available)
+2026-08-01T09:53:26Z scheduler thread start
+2026-08-01T09:53:26Z [warning] Option -rpcallowip was specified without -rpcbind; this doesn't usually make sense
+2026-08-01T09:53:26Z Binding RPC on address ::1 port 8332
+2026-08-01T09:53:26Z Binding RPC on address 127.0.0.1 port 8332
+2026-08-01T09:53:26Z Using rpcuser/rpcpassword authentication.
+2026-08-01T09:53:26Z [warning] The use of rpcuser/rpcpassword is less secure, because credentials are configured in plain text. It is recommended that locally-run instances switch to cookie-based auth, or otherwise to use hashed rpcauth credentials. See share/rpcauth in the source directory for more information.
+2026-08-01T09:53:26Z Starting HTTP server with 16 worker threads
+2026-08-01T09:53:26Z http_pool_0 thread start
+2026-08-01T09:53:26Z http_pool_1 thread start
+2026-08-01T09:53:26Z http_pool_2 thread start
+2026-08-01T09:53:26Z http_pool_3 thread start
+2026-08-01T09:53:26Z http_pool_4 thread start
+2026-08-01T09:53:26Z http_pool_5 thread start
+2026-08-01T09:53:26Z http_pool_6 thread start
+2026-08-01T09:53:26Z http_pool_7 thread start
+2026-08-01T09:53:26Z http_pool_8 thread start
+2026-08-01T09:53:26Z http_pool_9 thread start
+2026-08-01T09:53:26Z http_pool_10 thread start
+2026-08-01T09:53:26Z http_pool_11 thread start
+2026-08-01T09:53:26Z http_pool_12 thread start
+2026-08-01T09:53:26Z http_pool_13 thread start
+2026-08-01T09:53:26Z http_pool_14 thread start
+2026-08-01T09:53:26Z http_pool_15 thread start
+2026-08-01T09:53:26Z Using wallet directory /data/data/com.termux/files/home/04/04/00/00
+2026-08-01T09:53:26Z Using SQLite Version 3.53.2
+2026-08-01T09:53:26Z init message: Verifying wallet(s)…
+2026-08-01T09:53:26Z Using /16 prefix for IP bucketing
+2026-08-01T09:53:26Z init message: Loading P2P addresses…
+2026-08-01T09:53:26Z Creating peers.dat because the file was not found ("/data/data/com.termux/files/home/04/04/00/00/peers.dat")
+2026-08-01T09:53:26Z init message: Loading banlist…
+2026-08-01T09:53:26Z Recreating the banlist database
+2026-08-01T09:53:26Z SetNetworkActive: true
+2026-08-01T09:53:26Z /data/data/com.termux/files/home/04/04/00/00/fee_estimates.dat is not found. Continue anyway.
+2026-08-01T09:53:26Z Cache configuration:
+2026-08-01T09:53:26Z * Using 2.0 MiB for block index database
+2026-08-01T09:53:26Z * Using 8.0 MiB for chain state database
+2026-08-01T09:53:26Z * Using 1014.0 MiB for in-memory UTXO set (plus up to 286.1 MiB of unused mempool space)
+2026-08-01T09:53:26Z Script verification uses 7 additional threads
+2026-08-01T09:53:26Z Using obfuscation key for blocksdir *.dat files (/data/data/com.termux/files/home/04/04/00/00/blocks): 'd923edcf24bbc601'
+2026-08-01T09:53:26Z Opening LevelDB in /data/data/com.termux/files/home/04/04/00/00/blocks/index
+2026-08-01T09:53:26Z Opened LevelDB successfully
+2026-08-01T09:53:26Z Using obfuscation key for /data/data/com.termux/files/home/04/04/00/00/blocks/index: 0000000000000000
+2026-08-01T09:53:26Z Using 16 MiB out of 16 MiB requested for signature cache, able to store 524288 elements
+2026-08-01T09:53:26Z Using 16 MiB out of 16 MiB requested for script execution cache, able to store 524288 elements
+2026-08-01T09:53:26Z init message: Loading block index…
+2026-08-01T09:53:26Z Assuming ancestors of block 00000000000000000000ccebd6d74d9194d8dcdc1d177c478e094bfad51ba5ac have valid signatures.
+2026-08-01T09:53:26Z Setting nMinimumChainWork=0000000000000000000000000000000000000001128750f82f4c366153a3a030
+2026-08-01T09:53:26Z Loading block index db: last block file = 0
+2026-08-01T09:53:26Z Loading block index db: last block file info: CBlockFileInfo(blocks=0, size=0, heights=0...0, time=1970-01-01...1970-01-01)
+2026-08-01T09:53:26Z Checking all blk files are present...
+2026-08-01T09:53:26Z [error] A fatal internal error occurred, see debug.log for details: Disk space is too low!
+2026-08-01T09:53:26Z [error] FindNextBlockPos failed for FlatFilePos(nFile=-1, nPos=0) while writing block
+2026-08-01T09:53:26Z [error] LoadGenesisBlock: writing genesis block to disk failed
+2026-08-01T09:53:26Z [error] Error initializing block database
+2026-08-01T09:53:26Z http_pool_14 thread exit
+2026-08-01T09:53:26Z http_pool_1 thread exit
+2026-08-01T09:53:26Z http_pool_3 thread exit
+2026-08-01T09:53:26Z http_pool_5 thread exit
+2026-08-01T09:53:26Z http_pool_6 thread exit
+2026-08-01T09:53:26Z http_pool_0 thread exit
+2026-08-01T09:53:26Z http_pool_12 thread exit
+2026-08-01T09:53:26Z http_pool_13 thread exit
+2026-08-01T09:53:26Z http_pool_7 thread exit
+2026-08-01T09:53:26Z http_pool_9 thread exit
+2026-08-01T09:53:26Z http_pool_10 thread exit
+2026-08-01T09:53:26Z Shutdown in progress...
+2026-08-01T09:53:26Z http_pool_11 thread exit
+2026-08-01T09:53:26Z http_pool_8 thread exit
+2026-08-01T09:53:26Z http_pool_15 thread exit
+2026-08-01T09:53:26Z http_pool_4 thread exit
+2026-08-01T09:53:26Z http_pool_2 thread exit
+2026-08-01T09:53:26Z scheduler thread exit
+2026-08-01T09:53:26Z Shutdown done
+
+
+
+
+
+2026-08-01T09:56:59Z Bitcoin Core version v31.0.0 (release build)
+2026-08-01T09:56:59Z Log output may contain privacy-sensitive information. Be cautious when sharing logs.
+2026-08-01T09:56:59Z Using the 'arm_shani(1way;2way)' SHA256 implementation
+2026-08-01T09:56:59Z Default data directory /data/data/com.termux/files/home/.bitcoin
+2026-08-01T09:56:59Z Using data directory /data/data/com.termux/files/home/04/04/00/00
+2026-08-01T09:56:59Z Config file: /data/data/com.termux/files/home/04/04/00/00/bitcoin.conf
+2026-08-01T09:56:59Z Config file arg: daemon="1"
+2026-08-01T09:56:59Z Config file arg: daemon="1"
+2026-08-01T09:56:59Z Config file arg: rpcallowip="127.0.0.1"
+2026-08-01T09:56:59Z Config file arg: rpcpassword=****
+2026-08-01T09:56:59Z Config file arg: rpcpassword=****
+2026-08-01T09:56:59Z Config file arg: rpcuser=****
+2026-08-01T09:56:59Z Config file arg: rpcuser=****
+2026-08-01T09:56:59Z Config file arg: server="1"
+2026-08-01T09:56:59Z Config file arg: server="1"
+2026-08-01T09:56:59Z Command-line arg: daemon=""
+2026-08-01T09:56:59Z Command-line arg: datadir="/data/data/com.termux/files/home/04/04/00/00"
+2026-08-01T09:56:59Z Using at most 125 automatic connections (32768 file descriptors available)
+2026-08-01T09:56:59Z scheduler thread start
+2026-08-01T09:56:59Z [warning] Option -rpcallowip was specified without -rpcbind; this doesn't usually make sense
+2026-08-01T09:56:59Z Binding RPC on address ::1 port 8332
+2026-08-01T09:56:59Z Binding RPC on address 127.0.0.1 port 8332
+2026-08-01T09:56:59Z Using rpcuser/rpcpassword authentication.
+2026-08-01T09:56:59Z [warning] The use of rpcuser/rpcpassword is less secure, because credentials are configured in plain text. It is recommended that locally-run instances switch to cookie-based auth, or otherwise to use hashed rpcauth credentials. See share/rpcauth in the source directory for more information.
+2026-08-01T09:56:59Z Starting HTTP server with 16 worker threads
+2026-08-01T09:56:59Z http_pool_0 thread start
+2026-08-01T09:56:59Z http_pool_1 thread start
+2026-08-01T09:56:59Z http_pool_2 thread start
+2026-08-01T09:56:59Z http_pool_3 thread start
+2026-08-01T09:56:59Z http_pool_4 thread start
+2026-08-01T09:56:59Z http_pool_5 thread start
+2026-08-01T09:56:59Z http_pool_6 thread start
+2026-08-01T09:56:59Z http_pool_7 thread start
+2026-08-01T09:56:59Z http_pool_8 thread start
+2026-08-01T09:56:59Z http_pool_9 thread start
+2026-08-01T09:56:59Z http_pool_10 thread start
+2026-08-01T09:56:59Z http_pool_11 thread start
+2026-08-01T09:56:59Z http_pool_12 thread start
+2026-08-01T09:56:59Z http_pool_13 thread start
+2026-08-01T09:56:59Z Using wallet directory /data/data/com.termux/files/home/04/04/00/00
+2026-08-01T09:56:59Z Using SQLite Version 3.53.2
+2026-08-01T09:56:59Z init message: Verifying wallet(s)…
+2026-08-01T09:56:59Z Using /16 prefix for IP bucketing
+2026-08-01T09:56:59Z init message: Loading P2P addresses…
+2026-08-01T09:56:59Z http_pool_14 thread start
+2026-08-01T09:56:59Z http_pool_15 thread start
+2026-08-01T09:56:59Z Loaded 0 addresses from peers.dat  0ms
+2026-08-01T09:56:59Z init message: Loading banlist…
+2026-08-01T09:56:59Z SetNetworkActive: true
+2026-08-01T09:56:59Z Cache configuration:
+2026-08-01T09:56:59Z * Using 2.0 MiB for block index database
+2026-08-01T09:56:59Z * Using 8.0 MiB for chain state database
+2026-08-01T09:56:59Z * Using 1014.0 MiB for in-memory UTXO set (plus up to 286.1 MiB of unused mempool space)
+2026-08-01T09:56:59Z Script verification uses 7 additional threads
+2026-08-01T09:56:59Z Using obfuscation key for blocksdir *.dat files (/data/data/com.termux/files/home/04/04/00/00/blocks): 'd923edcf24bbc601'
+2026-08-01T09:56:59Z Opening LevelDB in /data/data/com.termux/files/home/04/04/00/00/blocks/index
+2026-08-01T09:56:59Z Opened LevelDB successfully
+2026-08-01T09:56:59Z Using obfuscation key for /data/data/com.termux/files/home/04/04/00/00/blocks/index: 0000000000000000
+2026-08-01T09:56:59Z Using 16 MiB out of 16 MiB requested for signature cache, able to store 524288 elements
+2026-08-01T09:56:59Z Using 16 MiB out of 16 MiB requested for script execution cache, able to store 524288 elements
+2026-08-01T09:56:59Z init message: Loading block index…
+2026-08-01T09:56:59Z Assuming ancestors of block 00000000000000000000ccebd6d74d9194d8dcdc1d177c478e094bfad51ba5ac have valid signatures.
+2026-08-01T09:56:59Z Setting nMinimumChainWork=0000000000000000000000000000000000000001128750f82f4c366153a3a030
+2026-08-01T09:56:59Z Loading block index db: last block file = 0
+2026-08-01T09:56:59Z Loading block index db: last block file info: CBlockFileInfo(blocks=0, size=0, heights=0...0, time=1970-01-01...1970-01-01)
+2026-08-01T09:56:59Z Checking all blk files are present...
+2026-08-01T09:56:59Z [error] A fatal internal error occurred, see debug.log for details: Disk space is too low!
+2026-08-01T09:56:59Z [error] FindNextBlockPos failed for FlatFilePos(nFile=-1, nPos=0) while writing block
+2026-08-01T09:56:59Z [error] LoadGenesisBlock: writing genesis block to disk failed
+2026-08-01T09:56:59Z [error] Error initializing block database
+2026-08-01T09:56:59Z http_pool_13 thread exit
+2026-08-01T09:56:59Z http_pool_2 thread exit
+2026-08-01T09:56:59Z http_pool_3 thread exit
+2026-08-01T09:56:59Z http_pool_0 thread exit
+2026-08-01T09:56:59Z http_pool_6 thread exit
+2026-08-01T09:56:59Z http_pool_8 thread exit
+2026-08-01T09:56:59Z http_pool_10 thread exit
+2026-08-01T09:56:59Z http_pool_11 thread exit
+2026-08-01T09:56:59Z http_pool_7 thread exit
+2026-08-01T09:56:59Z http_pool_14 thread exit
+2026-08-01T09:56:59Z http_pool_1 thread exit
+2026-08-01T09:56:59Z http_pool_9 thread exit
+2026-08-01T09:56:59Z http_pool_12 thread exit
+2026-08-01T09:56:59Z http_pool_4 thread exit
+2026-08-01T09:56:59Z http_pool_15 thread exit
+2026-08-01T09:56:59Z http_pool_5 thread exit
+2026-08-01T09:56:59Z Shutdown in progress...
+2026-08-01T09:56:59Z scheduler thread exit
+2026-08-01T09:56:59Z Shutdown done
+
+
+
+
+
+2026-08-01T09:57:18Z Bitcoin Core version v31.0.0 (release build)
+2026-08-01T09:57:18Z Log output may contain privacy-sensitive information. Be cautious when sharing logs.
+2026-08-01T09:57:18Z Using the 'arm_shani(1way;2way)' SHA256 implementation
+2026-08-01T09:57:19Z Default data directory /data/data/com.termux/files/home/.bitcoin
+2026-08-01T09:57:19Z Using data directory /data/data/com.termux/files/home/04/04/00/00
+2026-08-01T09:57:19Z Config file: /data/data/com.termux/files/home/04/04/00/00/bitcoin.conf
+2026-08-01T09:57:19Z Config file arg: daemon="1"
+2026-08-01T09:57:19Z Config file arg: daemon="1"
+2026-08-01T09:57:19Z Config file arg: rpcallowip="127.0.0.1"
+2026-08-01T09:57:19Z Config file arg: rpcpassword=****
+2026-08-01T09:57:19Z Config file arg: rpcpassword=****
+2026-08-01T09:57:19Z Config file arg: rpcuser=****
+2026-08-01T09:57:19Z Config file arg: rpcuser=****
+2026-08-01T09:57:19Z Config file arg: server="1"
+2026-08-01T09:57:19Z Config file arg: server="1"
+2026-08-01T09:57:19Z Command-line arg: daemon=""
+2026-08-01T09:57:19Z Command-line arg: datadir="/data/data/com.termux/files/home/04/04/00/00"
+2026-08-01T09:57:19Z Using at most 125 automatic connections (32768 file descriptors available)
+2026-08-01T09:57:19Z scheduler thread start
+2026-08-01T09:57:19Z [warning] Option -rpcallowip was specified without -rpcbind; this doesn't usually make sense
+2026-08-01T09:57:19Z Binding RPC on address ::1 port 8332
+2026-08-01T09:57:19Z Binding RPC on address 127.0.0.1 port 8332
+2026-08-01T09:57:19Z Using rpcuser/rpcpassword authentication.
+2026-08-01T09:57:19Z [warning] The use of rpcuser/rpcpassword is less secure, because credentials are configured in plain text. It is recommended that locally-run instances switch to cookie-based auth, or otherwise to use hashed rpcauth credentials. See share/rpcauth in the source directory for more information.
+2026-08-01T09:57:19Z Starting HTTP server with 16 worker threads
+2026-08-01T09:57:19Z http_pool_0 thread start
+2026-08-01T09:57:19Z http_pool_1 thread start
+2026-08-01T09:57:19Z http_pool_3 thread start
+2026-08-01T09:57:19Z http_pool_2 thread start
+2026-08-01T09:57:19Z http_pool_4 thread start
+2026-08-01T09:57:19Z http_pool_5 thread start
+2026-08-01T09:57:19Z http_pool_6 thread start
+2026-08-01T09:57:19Z http_pool_7 thread start
+2026-08-01T09:57:19Z http_pool_8 thread start
+2026-08-01T09:57:19Z http_pool_9 thread start
+2026-08-01T09:57:19Z http_pool_10 thread start
+2026-08-01T09:57:19Z http_pool_11 thread start
+2026-08-01T09:57:19Z http_pool_12 thread start
+2026-08-01T09:57:19Z http_pool_13 thread start
+2026-08-01T09:57:19Z http_pool_14 thread start
+2026-08-01T09:57:19Z http_pool_15 thread start
+2026-08-01T09:57:19Z Using wallet directory /data/data/com.termux/files/home/04/04/00/00
+2026-08-01T09:57:19Z Using SQLite Version 3.53.2
+2026-08-01T09:57:19Z init message: Verifying wallet(s)…
+2026-08-01T09:57:19Z Using /16 prefix for IP bucketing
+2026-08-01T09:57:19Z init message: Loading P2P addresses…
+2026-08-01T09:57:19Z Loaded 0 addresses from peers.dat  0ms
+2026-08-01T09:57:19Z init message: Loading banlist…
+2026-08-01T09:57:19Z SetNetworkActive: true
+2026-08-01T09:57:19Z Cache configuration:
+2026-08-01T09:57:19Z * Using 2.0 MiB for block index database
+2026-08-01T09:57:19Z * Using 8.0 MiB for chain state database
+2026-08-01T09:57:19Z * Using 1014.0 MiB for in-memory UTXO set (plus up to 286.1 MiB of unused mempool space)
+2026-08-01T09:57:19Z Script verification uses 7 additional threads
+2026-08-01T09:57:19Z Using obfuscation key for blocksdir *.dat files (/data/data/com.termux/files/home/04/04/00/00/blocks): 'd923edcf24bbc601'
+2026-08-01T09:57:19Z Opening LevelDB in /data/data/com.termux/files/home/04/04/00/00/blocks/index
+2026-08-01T09:57:19Z Opened LevelDB successfully
+2026-08-01T09:57:19Z Using obfuscation key for /data/data/com.termux/files/home/04/04/00/00/blocks/index: 0000000000000000
+2026-08-01T09:57:19Z Using 16 MiB out of 16 MiB requested for signature cache, able to store 524288 elements
+2026-08-01T09:57:19Z Using 16 MiB out of 16 MiB requested for script execution cache, able to store 524288 elements
+2026-08-01T09:57:19Z init message: Loading block index…
+2026-08-01T09:57:19Z Assuming ancestors of block 00000000000000000000ccebd6d74d9194d8dcdc1d177c478e094bfad51ba5ac have valid signatures.
+2026-08-01T09:57:19Z Setting nMinimumChainWork=0000000000000000000000000000000000000001128750f82f4c366153a3a030
+2026-08-01T09:57:19Z Loading block index db: last block file = 0
+2026-08-01T09:57:19Z Loading block index db: last block file info: CBlockFileInfo(blocks=0, size=0, heights=0...0, time=1970-01-01...1970-01-01)
+2026-08-01T09:57:19Z Checking all blk files are present...
+2026-08-01T09:57:19Z [error] A fatal internal error occurred, see debug.log for details: Disk space is too low!
+2026-08-01T09:57:19Z [error] FindNextBlockPos failed for FlatFilePos(nFile=-1, nPos=0) while writing block
+2026-08-01T09:57:19Z [error] LoadGenesisBlock: writing genesis block to disk failed
+2026-08-01T09:57:19Z [error] Error initializing block database
+2026-08-01T09:57:19Z http_pool_0 thread exit
+2026-08-01T09:57:19Z http_pool_1 thread exit
+2026-08-01T09:57:19Z http_pool_15 thread exit
+2026-08-01T09:57:19Z http_pool_3 thread exit
+2026-08-01T09:57:19Z http_pool_2 thread exit
+2026-08-01T09:57:19Z http_pool_9 thread exit
+2026-08-01T09:57:19Z http_pool_4 thread exit
+2026-08-01T09:57:19Z http_pool_5 thread exit
+2026-08-01T09:57:19Z http_pool_11 thread exit
+2026-08-01T09:57:19Z http_pool_10 thread exit
+2026-08-01T09:57:19Z http_pool_6 thread exit
+2026-08-01T09:57:19Z http_pool_14 thread exit
+2026-08-01T09:57:19Z http_pool_13 thread exit
+2026-08-01T09:57:19Z http_pool_8 thread exit
+2026-08-01T09:57:19Z http_pool_7 thread exit
+2026-08-01T09:57:19Z http_pool_12 thread exit
+2026-08-01T09:57:19Z Shutdown in progress...
+2026-08-01T09:57:19Z scheduler thread exit
+2026-08-01T09:57:19Z Shutdown done
+
+
+
+
+
+2026-08-10T16:46:58Z Bitcoin Core version v31.0.0 (release build)
+2026-08-10T16:46:58Z Log output may contain privacy-sensitive information. Be cautious when sharing logs.
+2026-08-10T16:46:58Z Using the 'arm_shani(1way;2way)' SHA256 implementation
+2026-08-10T16:46:58Z Default data directory /data/data/com.termux/files/home/.bitcoin
+2026-08-10T16:46:58Z Using data directory /data/data/com.termux/files/home/04/04/00/00
+2026-08-10T16:46:58Z Config file: /data/data/com.termux/files/home/04/04/00/00/bitcoin.conf
+2026-08-10T16:46:58Z Config file arg: rpcallowip="127.0.0.1"
+2026-08-10T16:46:58Z Config file arg: rpcpassword=****
+2026-08-10T16:46:58Z Config file arg: rpcuser=****
+2026-08-10T16:46:58Z Command-line arg: allowignoredconf="1"
+2026-08-10T16:46:58Z Command-line arg: daemon=""
+2026-08-10T16:46:58Z Command-line arg: datadir="/data/data/com.termux/files/home/04/04/00/00"
+2026-08-10T16:46:58Z Using at most 125 automatic connections (32768 file descriptors available)
+2026-08-10T16:46:58Z scheduler thread start
+2026-08-10T16:46:58Z [warning] Option -rpcallowip was specified without -rpcbind; this doesn't usually make sense
+2026-08-10T16:46:58Z Binding RPC on address ::1 port 8332
+2026-08-10T16:46:58Z [warning] Binding RPC on address ::1 port 8332 failed.
+2026-08-10T16:46:58Z Binding RPC on address 127.0.0.1 port 8332
+2026-08-10T16:46:58Z [warning] Binding RPC on address 127.0.0.1 port 8332 failed.
+2026-08-10T16:46:58Z [error] Unable to bind any endpoint for RPC server
+2026-08-10T16:46:58Z [error] Unable to start HTTP server. See debug log for details.
+2026-08-10T16:46:58Z Shutdown in progress...
+2026-08-10T16:46:58Z scheduler thread exit
+2026-08-10T16:46:58Z Shutdown done

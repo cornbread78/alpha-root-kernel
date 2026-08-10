@@ -1,0 +1,9 @@
+{
+    "kernel": "Alpha Root Kernel",
+    "path": "04/04/00/00",
+    "timestamp": 1786391302,
+    "status": "CONSENSUS_LOCKED",
+    "interface": "127.0.0.1:8350",
+    "hash_proof": "78a5d9fc5707af9eb253321744eae34a",
+    "node_response": "[+] ALPHA_ROOT_KERNEL: CONSENSUS_LOCKED_PATH_04/04/00/00"
+}
