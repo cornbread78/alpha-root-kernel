@@ -1,49 +1,66 @@
 import os
 import json
 
-def inspect_local_files():
-    print("[*] Inspecting local workspace files in current directory...")
-    print("-" * 50)
+PATH_VECTOR = "04/04/00/00"
+TARGET_DIR = os.path.expanduser(f"~/{PATH_VECTOR}")
+
+def main():
+    print("==================================================")
+    print("      ALPHA ROOT KERNEL - WORKSPACE INSPECTOR     ")
+    print(f"      Path Vector Directory: {TARGET_DIR}")
+    print("==================================================")
+
+    if not os.path.exists(TARGET_DIR):
+        print(f"[!] Directory {TARGET_DIR} does not exist.")
+        return
+
+    files = [f for f in os.listdir(TARGET_DIR) if os.path.isfile(os.path.join(TARGET_DIR, f))]
     
-    # Check ledger
-    if os.path.exists("alpha_root.ledger"):
-        print("[+] Found: alpha_root.ledger")
-        try:
-            with open("alpha_root.ledger", "r") as f:
-                content = f.read()
-            print(f"    Content: {content}")
-        except Exception as e:
-            print(f"    [!] Error reading ledger: {e}")
-    else:
-        print("[-] Missing: alpha_root.ledger")
+    if not files:
+        print("[!] Workspace directory is empty.")
+        return
 
-    # Check export json
-    if os.path.exists("alpha_root_export.json"):
-        print("[+] Found: alpha_root_export.json")
-        try:
-            with open("alpha_root_export.json", "r") as f:
-                data = json.load(f)
-            print(f"    JSON Data: {json.dumps(data, indent=2)}")
-        except Exception as e:
-            print(f"    [!] Error reading JSON: {e}")
-    else:
-        print("[-] Missing: alpha_root_export.json")
+    print(f"[+] Found {len(files)} workspace artifact(s):\n")
 
-    # Check kernel tx payload
-    if os.path.exists("kernel_tx.dat"):
-        print("[+] Found: kernel_tx.dat")
-        try:
-            with open("kernel_tx.dat", "rb") as f:
-                payload = f.read()
-            print(f"    Size: {len(payload)} bytes")
-            print(f"    Hex Preview: {payload[:32].hex()}...")
-        except Exception as e:
-            print(f"    [!] Error reading payload: {e}")
-    else:
-        print("[-] Missing: kernel_tx.dat")
+    for filename in sorted(files):
+        filepath = os.path.join(TARGET_DIR, filename)
+        size = os.path.getsize(filepath)
         
-    print("-" * 50)
-    print("[*] Inspection complete. Returning control to command line.")
+        print("--------------------------------------------------")
+        print(f" Artifact: {filename} ({size} bytes)")
+        print("--------------------------------------------------")
+
+        try:
+            with open(filepath, "rb") as f:
+                raw_bytes = f.read()
+
+            # Attempt JSON rendering
+            try:
+                json_data = json.loads(raw_bytes.decode('utf-8'))
+                print("[Format: Structured JSON]")
+                print(json.dumps(json_data, indent=2))
+            except Exception:
+                # Attempt plain UTF-8 text rendering
+                try:
+                    text_str = raw_bytes.decode('utf-8')
+                    if text_str.isprintable() or '\n' in text_str or '\r' in text_str:
+                        print("[Format: Text Sequence]")
+                        print(text_str.strip())
+                    else:
+                        raise ValueError()
+                except Exception:
+                    # Fallback to raw hex inspection
+                    print("[Format: Raw Binary Hex]")
+                    print(f"Hex Stream: {raw_bytes.hex()}")
+
+        except Exception as e:
+            print(f"[!] Unable to read artifact: {e}")
+
+        print("\n")
+
+    print("==================================================")
+    print("            INSPECTION COMPLETE                   ")
+    print("==================================================")
 
 if __name__ == "__main__":
-    inspect_local_files()
+    main()
