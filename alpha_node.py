@@ -1,36 +1,29 @@
 import socket
-import sys
 
-HOST = "127.0.0.1"
+HOST = '127.0.0.1'
 PORT = 8350
-PATH_ID = "04/04/00/00"
 
 def run_node():
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    # Enable SO_REUSEADDR to prevent [Errno 98] Address already in use
     s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-    try:
-        s.bind((HOST, PORT))
-    except OSError as e:
-        print(f"[!] Bind error on port {PORT}: {e}")
-        sys.exit(1)
-        
-    s.listen(5)
-    print(f"[*] Alpha Root Kernel Node active on {HOST}:{PORT} for path {PATH_ID}")
-    print("[*] Waiting for incoming frame transmission...")
     
     try:
+        s.bind((HOST, PORT))
+        s.listen(1)
+        print(f"[*] Alpha Root Node listening on {HOST}:{PORT}...")
+        
         while True:
             conn, addr = s.accept()
-            print(f"[+] Connection established from {addr}")
-            data = conn.recv(4096)
+            print(f"[+] Connected by {addr}")
+            data = conn.recv(1024)
             if data:
-                print(f"[+] Received raw frame: {len(data)} bytes")
-                response = f"[+] ALPHA_ROOT_KERNEL: CONSENSUS_LOCKED_PATH_{PATH_ID}\n"
-                conn.sendall(response.encode('utf-8'))
+                conn.sendall(b"[+] ALPHA_ROOT_KERNEL: CONSENSUS_LOCKED_PATH_04/04/00/00\n")
             conn.close()
-    except KeyboardInterrupt:
-        print("\n[*] Shutting down node daemon.")
+    except Exception as e:
+        print(f"[!] Node error: {e}")
+    finally:
         s.close()
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     run_node()

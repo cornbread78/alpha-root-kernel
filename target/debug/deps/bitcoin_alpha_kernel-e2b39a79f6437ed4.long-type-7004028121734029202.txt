@@ -1,0 +1,2 @@
+Vec<u8>: AsRef<bitcoin::script::PushBytes>
+AsRef<bitcoin::script::PushBytes>

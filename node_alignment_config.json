@@ -1,0 +1,14 @@
+{
+    "kernel_name": "Alpha Root Kernel",
+    "path_vector": "04/04/00/00",
+    "xor_mask": [
+        4,
+        4,
+        0,
+        0
+    ],
+    "genesis_anchor": "000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f",
+    "payload_hash": "78a5d9fc5707af9eb253321744eae34a749f0ce3207fb5884cf560d2800d2452",
+    "alignment_status": "ALIGNED_AND_LOCKED",
+    "interface_target": "127.0.0.1:8350"
+}
