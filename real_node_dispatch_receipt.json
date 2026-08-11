@@ -1,0 +1,7 @@
+{
+    "target": "179.118.220.79:8333",
+    "path_vector": "04/04/00/00",
+    "cargo_hash": "f562aabfe69a37c87dcb46227a9bceeca3f91ac5944533f5c5bb927a96198989",
+    "bytes_sent": 1586,
+    "status": "DISPATCHED_TO_REAL_NODE"
+}

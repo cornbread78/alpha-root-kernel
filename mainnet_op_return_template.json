@@ -1,0 +1,20 @@
+{
+    "version": 2,
+    "marker": 0,
+    "flag": 1,
+    "inputs": [
+        {
+            "txid": "REPLACE_WITH_REAL_FUNDED_UTXO_TXID",
+            "vout": 0,
+            "scriptSig": "",
+            "sequence": 4294967295
+        }
+    ],
+    "outputs": [
+        {
+            "value": 0,
+            "scriptPubKey": "6a2099db02b8f2d8c69d76917143e807d10121bcc65d52d7e7ab34f52932e44c0394"
+        }
+    ],
+    "locktime": 0
+}

@@ -1,10 +1,9 @@
 [package]
-name = "bitcoin_alpha_kernel"
+name = "alpha_root_kernel"
 version = "0.1.0"
 edition = "2021"
 
 [dependencies]
 bitcoin = "0.32"
 sha2 = "0.10"
-hex = "0.4"
 hmac = "0.12"

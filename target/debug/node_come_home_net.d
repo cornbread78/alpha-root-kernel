@@ -1,0 +1,1 @@
+/data/data/com.termux/files/home/04/04/00/00/target/debug/node_come_home_net: /data/data/com.termux/files/home/04/04/00/00/src/bin/node_come_home_net.rs /data/data/com.termux/files/home/04/04/00/00/src/lib.rs

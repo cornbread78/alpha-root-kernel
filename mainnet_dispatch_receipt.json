@@ -1,0 +1,8 @@
+{
+    "target": "179.118.220.79:8333",
+    "path_vector": "04/04/00/00",
+    "payload_file": "xor_masked_kernel_tx.dat",
+    "payload_hash": "99db02b8f2d8c69d76917143e807d10121bcc65d52d7e7ab34f52932e44c0394",
+    "bytes_sent": 109,
+    "status": "MAINNET_DISPATCH_COMMITTED"
+}

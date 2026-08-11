@@ -1,23 +1,16 @@
 pub struct AlphaRootKernel {
-    pub path: String,
-    pub consensus_active: bool,
+    pub path_vector: &'static str,
     pub xor_mask: [u8; 4],
 }
 
 impl AlphaRootKernel {
-    pub fn new(path: &str, xor_mask: [u8; 4]) -> Self {
-        Self {
-            path: path.to_string(),
-            consensus_active: false,
-            xor_mask,
-        }
+    pub fn new(path_vector: &'static str, xor_mask: [u8; 4]) -> Self {
+        Self { path_vector, xor_mask }
     }
 
-    pub fn verify_consensus(&mut self, payload: &[u8]) -> bool {
-        if payload.is_empty() {
-            return false;
+    pub fn apply_zero_targeted_xor(&self, payload: &mut [u8]) {
+        for (i, byte) in payload.iter_mut().enumerate() {
+            *byte ^= self.xor_mask[i % self.xor_mask.len()];
         }
-        self.consensus_active = true;
-        true
     }
 }

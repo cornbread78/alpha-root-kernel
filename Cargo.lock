@@ -3,6 +3,15 @@
 version = 4
 
 [[package]]
+name = "alpha_root_kernel"
+version = "0.1.0"
+dependencies = [
+ "bitcoin",
+ "hmac",
+ "sha2",
+]
+
+[[package]]
 name = "arrayvec"
 version = "0.7.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -72,16 +81,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "9cb95693f371d089a4b5b6fc41c6f3ea6e01ee8c15388335dfac8ea685173b51"
 dependencies = [
  "bitcoin-consensus-encoding",
-]
-
-[[package]]
-name = "bitcoin_alpha_kernel"
-version = "0.1.0"
-dependencies = [
- "bitcoin",
- "hex",
- "hmac",
- "sha2",
 ]
 
 [[package]]
@@ -164,12 +163,6 @@ dependencies = [
  "typenum",
  "version_check",
 ]
-
-[[package]]
-name = "hex"
-version = "0.4.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7f24254aa9a54b5c858eaee2f5bccdb46aaf0e486a595ed5fd8f86ba55232a70"
 
 [[package]]
 name = "hex-conservative"

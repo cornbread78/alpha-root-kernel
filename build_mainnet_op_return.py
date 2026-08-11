@@ -1,57 +1,64 @@
 import hashlib
+import json
+import os
 
-# Verified Workspace Proof-of-Work Hash
-POW_HASH = "78a5d9fc5707af9eb253321744eae34a749f0ce3207fb5884cf560d2800d2452"
-PATH_VECTOR = "04/04/00/00"
-
-def build_compliant_transaction():
+def build_op_return_frame():
     print("==================================================")
-    print("   ALPHA ROOT KERNEL - MAINNET OP_RETURN BUILDER  ")
-    print(f"   Path Vector: {PATH_VECTOR}")
+    print(" ALPHA ROOT KERNEL - OP_RETURN TRANSACTION BUILDER")
     print("==================================================")
 
-    # 1. Transaction Version (4 bytes, little-endian)
-    version = bytes.fromhex("01000000")
-    
-    # 2. Input Count (VarInt: 1 input slot)
-    tx_in_count = bytes.fromhex("01")
-    
-    # 3. Input Source (Placeholder for UTXO reference: 32-byte txid + 4-byte index + scriptSig + sequence)
-    prev_tx_hash = bytes.fromhex("0000000000000000000000000000000000000000000000000000000000000000")
-    prev_index = bytes.fromhex("ffffffff")
-    script_sig_len = bytes.fromhex("00")
-    sequence = bytes.fromhex("ffffffff")
-    tx_in = prev_tx_hash + prev_index + script_sig_len + sequence
+    # Load the target kernel payload
+    payload_file = "xor_masked_kernel_tx.dat"
+    if not os.path.exists(payload_file):
+        payload_file = "kernel_tx.dat"
 
-    # 4. Output Count (VarInt: 1 output slot)
-    tx_out_count = bytes.fromhex("01")
-    
-    # 5. Output Value: 0 satoshis (8 bytes, little-endian)
-    value = bytes.fromhex("0000000000000000")
-    
-    # 6. OP_RETURN Script Construction: OP_RETURN (0x6a) + Push 32 bytes (0x20) + Hash payload
-    hash_bytes = bytes.fromhex(POW_HASH)
-    script_pub_key = bytes([0x6a, 0x20]) + hash_bytes
-    script_pub_key_len = bytes([len(script_pub_key)])
-    
-    tx_out = value + script_pub_key_len + script_pub_key
+    if not os.path.exists(payload_file):
+        print(f"[!] Error: No payload file found to anchor.")
+        return
 
-    # 7. Locktime (4 bytes, little-endian)
-    locktime = bytes.fromhex("00000000")
+    with open(payload_file, "rb") as f:
+        payload_data = f.read()
 
-    # Assemble raw transaction frame
-    raw_tx = version + tx_in_count + tx_in + tx_out_count + tx_out + locktime
+    # Generate the 32-byte SHA-256 hash for standard OP_RETURN data anchoring
+    payload_hash = hashlib.sha256(payload_data).digest()
     
-    output_filename = "mainnet_op_return_tx.hex"
-    with open(output_filename, "w") as f:
-        f.write(raw_tx.hex())
+    print(f"[+] Source Payload: {payload_file} ({len(payload_data)} bytes)")
+    print(f"[+] 32-Byte Hash for Anchoring: {payload_hash.hex()}")
 
-    print(f"[+] Embedded POW Hash: {POW_HASH}")
-    print(f"[+] Compliant Transaction Frame Generated: {output_filename}")
-    print(f"[+] Total Serialized Size: {len(raw_tx)} bytes")
-    print("--------------------------------------------------")
-    print(f"[+] ALPHA_ROOT_KERNEL: OP_RETURN_STRUCTURE_LOCKED_PATH_{PATH_VECTOR.replace('/', '_')}")
+    # Construct standard Bitcoin transaction template components
+    # Version (4 bytes) + Input Count + Dummy Input (UTXO placeholder) + Output Count + OP_RETURN Output + Locktime
+    # OP_RETURN script format: OP_RETURN (0x6a) + Push Data Length (0x20 = 32 bytes) + 32-byte Hash
+    op_return_script = b"\x6a\x20" + payload_hash
+    
+    # Bundle into a structured JSON transmission template for node ingestion
+    tx_template = {
+        "version": 2,
+        "marker": 0,
+        "flag": 1,
+        "inputs": [
+            {
+                "txid": "REPLACE_WITH_REAL_FUNDED_UTXO_TXID",
+                "vout": 0,
+                "scriptSig": "",
+                "sequence": 4294967295
+            }
+        ],
+        "outputs": [
+            {
+                "value": 0,
+                "scriptPubKey": op_return_script.hex()
+            }
+        ],
+        "locktime": 0
+    }
+
+    output_filename = "mainnet_op_return_template.json"
+    with open(output_filename, "w") as tf:
+        json.dump(tx_template, tf, indent=4)
+
+    print(f"[+] Standard OP_RETURN Transaction Template Saved: {output_filename}")
+    print("[+] STATUS: TRANSACTION STRUCTURE READY FOR UTXO LINKING & SIGNING")
     print("==================================================")
 
 if __name__ == "__main__":
-    build_compliant_transaction()
+    build_op_return_frame()
